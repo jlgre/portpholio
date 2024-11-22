@@ -1,6 +1,8 @@
 <?php
 
 const NAME = "Your name";
-const PHOTO_DIR = './public/photos';
-const PREVIEW_DIR = './public/previews';
+
+// Relative to ./public
+const PHOTO_DIR = 'photos';
+const PREVIEW_DIR = '.previews';
 
