@@ -6,7 +6,7 @@ Eventually, I want this to:
 
 - [ ] Be styled pretty
 - [ ] Support smart-layouts (think like Flickr)
-- [ ] Load smaller image previews, and only load full-size when clicked
+- [x] Load smaller image previews, and only load full-size when clicked
 
 ## Set up
 
