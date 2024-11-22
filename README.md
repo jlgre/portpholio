@@ -10,4 +10,9 @@ Eventually, I want this to:
 
 ## Set up
 
-This should be ready to use for anyone with a server. Just `cp conf.example.php conf.php` and fill in the relevant values, fill whatever directory you chose with your photos, then set up your server to serve index.php.
+This should be ready to use for anyone with a server.
+
+1. `cp conf.example.php conf.php` and fill in the relevant values
+1. Fill whatever directory you chose with your photos
+1. Run `php mk_previews.php` to generate smaller preview files
+1. then set up your server to serve public/index.php

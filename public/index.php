@@ -1,9 +1,11 @@
 <?php
 try {
-  require_once('./conf.php');
+  require_once('../conf.php');
 } catch (Error $e) {
-  echo 'Error loading ./conf.php, ensure this file exists';
+  echo 'Error loading ../conf.php, ensure this file exists';
 }
+
+require_once('../constants.php');
 ?>
 
 <!DOCTYPE html>
@@ -19,20 +21,15 @@ try {
 <body>
 <?php
 
-const PHOTO_FILE_TYPES = [
-  'jpg',
-  'jpeg',
-  'png'
-];
-
-
-$photos = array_filter(scandir(PHOTO_DIR), function($v) {
+$photos = array_filter(scandir(PREVIEW_DIR), function($v) {
   return in_array(pathinfo($v, PATHINFO_EXTENSION), PHOTO_FILE_TYPES);
 });
 
 foreach ($photos as $photo) {
-  echo '<img src="'.PHOTO_DIR.'/'.$photo.'" />';
-  echo '';
+    $fullresPath = PHOTO_DIR.'/'.$photo;
+    $previewPath = PREVIEW_DIR.'/'.$photo;
+
+    echo '<a href="'.$fullresPath.'"><img src="'.$previewPath.'"></a>';
 }
 
 ?>
